@@ -8,10 +8,10 @@ function AppComponent() {
   var [curView, setCurrentView] = useState(loadStoredView() || Views.HOME);
 
   function loadStoredView() {
-    return localStorage.getItem('currentView');
+    return localStorage.getItem('chessstats-currentView');
   }
   function goToView(newView) {
-    localStorage.setItem('currentView', newView);
+    localStorage.setItem('chessstats-currentView', newView);
     setCurrentView(newView);
   }
   return (
