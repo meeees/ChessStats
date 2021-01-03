@@ -25,7 +25,7 @@ function ChessBoard() {
   for(i = 0; i < 16; i++) {
     markers.push(<Marker key={i+16} index={i} horizontal={true}><Fragment>{String.fromCharCode(65 + i % 8)}</Fragment></Marker>);
   }
-  return <div className = 'Board' style = {{width: boardWidth, height: boardWidth}}>
+  return <div className = 'Board' style = {{width: remify(boardWidth), height: remify(boardWidth)}}>
     {squares}
     {markers}
   </div>;
