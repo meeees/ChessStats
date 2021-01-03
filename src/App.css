@@ -21,6 +21,9 @@
 
 .Board {
   display: grid;
+  gap: 0;
+  width: fit-content;
+  width: -moz-fit-content;
 }
 
 .Marker {

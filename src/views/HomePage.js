@@ -25,7 +25,7 @@ function ChessBoard() {
   for(i = 0; i < 16; i++) {
     markers.push(<Marker key={i+16} index={i} horizontal={true}><Fragment>{String.fromCharCode(65 + i % 8)}</Fragment></Marker>);
   }
-  return <div className = 'Board' style = {{width: remify(boardWidth), height: remify(boardWidth)}}>
+  return <div className = 'Board'>
     {squares}
     {markers}
   </div>;
@@ -34,7 +34,6 @@ function ChessBoard() {
 const squareWidth = 6;
 const fontSize = 1.5;
 const paddingSize = 0.1;
-const boardWidth = squareWidth * 8 + fontSize * 2 + paddingSize * 4;
 
 function remify(i) {
   return i + 'rem';
@@ -67,9 +66,12 @@ function Marker(props) {
   return <div className='Marker' style={{
     gridRowStart: '' + (props.horizontal ? (i / 8 < 1 ? 1 : 10) : (i % 8 + 2)),
     gridColumnStart: '' + (props.horizontal ? (i % 8 + 2) : (i / 8 < 1 ? 1 : 10)),
+    width: props.horizontal ? remify(squareWidth) : 'fit-content',
     fontSize: remify(fontSize),
-    paddingLeft: remify(paddingSize),
-    paddingRight: remify(paddingSize)
+    paddingLeft: props.horizontal ? '0' : remify(paddingSize),
+    paddingRight: props.horizontal ? '0' : remify(paddingSize),
+    paddingTop: !props.horizontal ? '0' : remify(paddingSize),
+    paddingBottom: !props.horizontal ? '0' : remify(paddingSize),
   }}>
     {props.children}
   </div>;
