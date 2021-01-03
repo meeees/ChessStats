@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+.View {
+  margin-left: 0.5rem;
+  width: 100%;
+}
+
+.Square {
+  width: 6rem;
+  height: 6rem;
+}
+
+.Board {
+  display: grid;
+}
+
+.Marker {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

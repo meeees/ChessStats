@@ -1,0 +1,77 @@
+.Navbar {
+  width: 4rem;
+  padding: 0.5rem;
+  margin: 0 0 0 0;
+  background: #c2c2c2;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: #3f3f3f;
+}
+
+.NavbarButtonDiv {
+  width: 100%;
+  position: relative;
+}
+
+.NavbarButtonDiv:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.NavbarButton {
+  height: 4rem;
+  width: 4rem;
+  position: relative;
+  border-radius: 10px;
+  border-color: black;
+  display: flex;
+  align-items: center;
+  max-width: 4rem;
+  background-color: rgb(224, 224, 224);
+  overflow-x: hidden;
+  box-shadow: inset 0px 0px 3px #3f3f3f;
+  z-index: 100;
+}
+
+.NavbarButton-Expanded {
+  width: fit-content;
+  width: -moz-fit-content;
+  padding-right: 0.5rem;
+  max-width: 40rem;
+  background-color: rgb(233, 233, 233);
+  box-shadow: 4px 2px 4px -2px rgb(0, 0, 0, 0.5), inset 0px 0px 3px #3f3f3f;
+  transition: max-width 1s;
+}
+
+.NavbarButton-Selected {
+  background-color: rgb(233, 233, 233);
+  border-width: 3px;
+  box-shadow: inset 1px 1px 3px 1px #3f3f3f;
+}
+
+.NavbarButton-Selected-Expanded {
+  border-width: 3px;
+  box-shadow: 4px 2px 4px -2px rgba(0, 0, 0, 0.5), inset 1px 1px 3px 1px #3f3f3f;
+}
+
+.NavbarButton span {
+  position: relative;
+  font-size: 2.5rem;
+  pointer-events: none;
+  padding-left: 0.5rem;
+}
+
+.NavbarButton img, .NavbarButton h1 {
+  pointer-events: none;
+  position: relative;
+  padding-left: 0.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 2.5rem;
+}
+
+.NavbarButton-Selected img,
+.NavbarButton-Selected-Expanded img {
+  margin-left: -1px;
+}
